@@ -10,7 +10,7 @@ jobs:
       - name: Build
         id: build
         run: |
-          cd mindetach pogo 
+          cd mindetach
           VER=$(grep version= module.prop | cut -d= -f2)
           echo "VER=$VER" >> $GITHUB_OUTPUT
           zip -r "../mindetach pogo-${VER}.zip" .
