@@ -1,7 +1,7 @@
-id=mindetach
-name=mindetach
+id=mindetach pogo
+name=mindetach pogo
 version=v3.3
 versionCode=11
 author=j-hc
-description=Minimal module for detaching apps from Play Store
+description=disables Pokemon go updates completely on playstore update with APK mirror
 updateJson=https://raw.githubusercontent.com/j-hc/mindetach-magisk/master/update.json
