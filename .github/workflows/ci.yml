@@ -10,15 +10,15 @@ jobs:
       - name: Build
         id: build
         run: |
-          cd mindetach
+          cd mindetach pogo 
           VER=$(grep version= module.prop | cut -d= -f2)
           echo "VER=$VER" >> $GITHUB_OUTPUT
-          zip -r "../mindetach-${VER}.zip" .
+          zip -r "../mindetach pogo-${VER}.zip" .
 
       - name: Upload module to release
         uses: svenstaro/upload-release-action@v2
         with:
-          file: mindetach-${{ steps.build.outputs.VER }}.zip
+          file: mindetach pogo-${{ steps.build.outputs.VER }}.zip
           release_name: mindetach-${{ steps.build.outputs.VER }}
           tag: ${{ steps.build.outputs.VER }}
           overwrite: true
